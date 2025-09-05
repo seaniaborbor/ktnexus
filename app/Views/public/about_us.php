@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                <img src="/public_assets/img/home/founder.jpg" alt="About RISE Liberia" class="img-fluid w-100 rounded-3 shadow">
+                <img src="/public_assets/img/home/162947308_server_room_400.jpg" alt="About RISE Liberia" class="img-fluid w-100 rounded-3 shadow">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
     <h2 class="section-title">Who We Are</h2>
