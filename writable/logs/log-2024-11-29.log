@@ -1,0 +1,185 @@
+ERROR - 2024-11-29 18:20:08 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'aiistdb' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'aiistdb', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\app\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'aiistdb' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\app\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\aiist-net-project\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2024-11-29 18:20:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'aiistdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `career_table`.*, COUNT(course_table.coursecareer) as total_courses
+FROM `career_table`
+JOIN `course_table` ON `career_table`.`careerId` = `course_table`.`coursecareer`
+GROUP BY `career_table`.`careerId`, `career_table`.`careerName`
+) CI_count_all_results', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:22:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:22:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('blog', 'blog_details', '8')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:22:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:22:51 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(350): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:23:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(350): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+INFO - 2024-11-29 18:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 18:24:11 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(350): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:24:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:25:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+CRITICAL - 2024-11-29 18:25:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+INFO - 2024-11-29 18:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 18:34:11 --> ErrorException: Undefined array key 0
+in APPPATH\Views\dashboard\certificate_view.php on line 12.
+ 1 APPPATH\Views\dashboard\certificate_view.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\dashboard\\certificate_view.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\dashboard\\certificate_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/certificate_view', [], true)
+ 5 APPPATH\Controllers\CertificateController.php(115): view('dashboard/certificate_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CertificateController->view_certificate('img', 'favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CertificateController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')
+INFO - 2024-11-29 18:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 18:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 18:36:47 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(350): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\aiist-net-project\\public\\index.php')

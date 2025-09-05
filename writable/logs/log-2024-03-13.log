@@ -1,0 +1,156 @@
+CRITICAL - 2024-03-13 17:24:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:25:01 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:29:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:29:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:46:57 --> ErrorException: Undefined array key "careerName"
+in APPPATH\Views\public\course_details.php on line 30.
+ 1 APPPATH\Views\public\course_details.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "careerName"', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\course_details.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\course_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/course_details', [], true)
+ 5 APPPATH\Controllers\CourseController.php(304): view('public/course_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:48:01 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:48:06 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:49:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:49:21 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:51:40 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:51:42 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:52:23 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:52:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:53:05 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:53:11 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:53:25 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:53:27 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:54:23 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-13 17:54:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')

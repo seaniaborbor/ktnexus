@@ -1,0 +1,8 @@
+CRITICAL - 2024-06-05 13:24:58 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')

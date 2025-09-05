@@ -1,0 +1,184 @@
+INFO - 2024-02-26 00:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-26 15:12:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'aiistdb', 3306, '', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#11 {main}
+CRITICAL - 2024-02-26 15:12:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `career_table`.*, COUNT(course_table.coursecareer) as total_courses
+FROM `career_table`
+JOIN `course_table` ON `career_table`.`careerId` = `course_table`.`coursecareer`
+GROUP BY `career_table`.`careerId`, `career_table`.`careerName`
+) CI_count_all_results', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-02-26 15:44:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'aiistdb', 3306, '', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#11 {main}
+CRITICAL - 2024-02-26 15:44:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `career_table`.*, COUNT(course_table.coursecareer) as total_courses
+FROM `career_table`
+JOIN `course_table` ON `career_table`.`careerId` = `course_table`.`coursecareer`
+GROUP BY `career_table`.`careerId`, `career_table`.`careerName`
+) CI_count_all_results', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\PublicController.php(29): CodeIgniter\BaseModel->paginate(6)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 15:50:22 --> ErrorException: Undefined variable $TestimonialsModel
+in APPPATH\Controllers\PublicController.php on line 34.
+ 1 APPPATH\Controllers\PublicController.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $TestimonialsModel', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\PublicController.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 15:51:00 --> ErrorException: Undefined variable $TestimonialsModel
+in APPPATH\Controllers\PublicController.php on line 36.
+ 1 APPPATH\Controllers\PublicController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $TestimonialsModel', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\PublicController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 17:32:47 --> ErrorException: Undefined property: stdClass::$blg_id
+in APPPATH\Views\public\partials\home_blog_section.php on line 23.
+ 1 APPPATH\Views\public\partials\home_blog_section.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$blg_id', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php', 23)
+ 2 APPPATH\Views\public\index.php(170): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\PublicController.php(43): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 17:33:45 --> ArgumentCountError: Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Models\BlogModel.php on line 24 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 617.
+ 1 APPPATH\Models\BlogModel.php(24): CodeIgniter\Database\BaseBuilder->join('team')
+ 2 APPPATH\Controllers\PublicController.php(38): App\Models\BlogModel->recent_blogs()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 17:35:10 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::orderBy()
+in APPPATH\Models\BlogModel.php on line 22.
+ 1 APPPATH\Controllers\PublicController.php(38): App\Models\BlogModel->recent_blogs()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 17:36:11 --> ErrorException: Undefined property: stdClass::$blg_id
+in APPPATH\Views\public\partials\home_blog_section.php on line 23.
+ 1 APPPATH\Views\public\partials\home_blog_section.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$blg_id', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php', 23)
+ 2 APPPATH\Views\public\index.php(170): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\PublicController.php(43): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 17:37:25 --> ErrorException: Undefined property: stdClass::$comment_count
+in APPPATH\Views\public\partials\home_blog_section.php on line 30.
+ 1 APPPATH\Views\public\partials\home_blog_section.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$comment_count', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php', 30)
+ 2 APPPATH\Views\public\index.php(170): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\PublicController.php(43): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-02-26 18:16:28 --> ErrorException: Undefined property: stdClass::$comment_count
+in APPPATH\Views\public\partials\home_blog_section.php on line 30.
+ 1 APPPATH\Views\public\partials\home_blog_section.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$comment_count', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php', 30)
+ 2 APPPATH\Views\public\index.php(170): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\partials\\home_blog_section.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\PublicController.php(43): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')

@@ -1,0 +1,408 @@
+CRITICAL - 2025-07-28 17:33:22 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::renderSection(), 0 passed in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Views\public\about_us.php on line 97 and at least 1 expected
+in SYSTEMPATH\View\View.php on line 446.
+ 1 APPPATH\Views\public\about_us.php(97): CodeIgniter\View\View->renderSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\public\\about_us.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/about_us', [], true)
+ 5 APPPATH\Controllers\Home.php(18): view('public/about_us', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->about()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 17:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 17:38:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "public/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('public/login.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(75): view('public/login', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 17:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 17:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-28 18:12:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ktnexus' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktnexus', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ktnexus' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2025-07-28 18:13:30 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-07-28 18:13:50 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-07-28 18:14:25 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-07-28 18:16:59 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\BaseCommand.php(115): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2025-07-28 18:17:44 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-07-28 18:19:48 --> mysqli_sql_exception: Duplicate key name 'slug' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Database\Migrations\2023_00_00_000001_create_projects_table.php(77): CodeIgniter\Database\Forge->createTable('projects')
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateProjectsTable->up()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+INFO - 2025-07-28 18:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 18:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 19:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 19:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 19:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 19:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 20:12:21 --> ErrorException: Undefined array key "passwd"
+in APPPATH\Controllers\AuthController.php on line 60.
+ 1 APPPATH\Controllers\AuthController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "passwd"', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Controllers\\AuthController.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-28 20:15:12 --> mysqli_sql_exception: Table 'ktnexus.customer_table' doesn't exist in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Database\BaseBuilder.php(1645): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Model.php(872): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\app\Controllers\DashboardController.php(22): CodeIgniter\Model->__call('countAll', Array)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kt-n\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-07-28 20:15:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ktnexus.customer_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1645): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `customer_table`', null, false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->countAll()
+ 3 APPPATH\Controllers\DashboardController.php(22): CodeIgniter\Model->__call('countAll', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+CRITICAL - 2025-07-28 20:15:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ktnexus.customer_table' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows` FROM `customer_table`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows` FROM `customer_table`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1645): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `customer_table`', null, false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->countAll()
+ 5 APPPATH\Controllers\DashboardController.php(22): CodeIgniter\Model->__call('countAll', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+CRITICAL - 2025-07-28 20:15:12 --> [Caused by] mysqli_sql_exception: Table 'ktnexus.customer_table' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows` FROM `customer_table`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows` FROM `customer_table`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows` FROM `customer_table`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1645): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `customer_table`', null, false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->countAll()
+ 6 APPPATH\Controllers\DashboardController.php(22): CodeIgniter\Model->__call('countAll', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 20:18:43 --> ErrorException: Undefined array key "profileImg"
+in APPPATH\Views\dashboard\partials\common\layout.php on line 3.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profileImg"', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(22): view('dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 20:19:47 --> ErrorException: Undefined array key "profileImg"
+in APPPATH\Views\dashboard\partials\common\layout.php on line 3.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profileImg"', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(22): view('dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 20:20:04 --> ErrorException: Undefined array key "profileImg"
+in APPPATH\Views\dashboard\partials\common\layout.php on line 3.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profileImg"', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(22): view('dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 20:20:23 --> ErrorException: Undefined array key "profileImg"
+in APPPATH\Views\dashboard\partials\common\layout.php on line 3.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profileImg"', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(22): view('dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 20:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 20:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:22:55 --> Error: Class "App\Models\ProjectModel" not found
+in APPPATH\Controllers\PortfolioController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\PortfolioController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:24:29 --> Error: Class "App\Models\ProjectModel" not found
+in APPPATH\Controllers\PortfolioController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\PortfolioController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:24:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/portfolio_create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/portfolio_create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/portfolio_create', [], true)
+ 3 APPPATH\Controllers\PortfolioController.php(116): view('dashboard/portfolio_create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PortfolioController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:40:52 --> Error: Class "App\Models\WarehouseItemModel" not found
+in APPPATH\Controllers\DashboardController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DashboardController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:40:54 --> Error: Class "App\Models\WarehouseItemModel" not found
+in APPPATH\Controllers\DashboardController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DashboardController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:40:59 --> Error: Class "App\Models\WarehouseItemModel" not found
+in APPPATH\Controllers\DashboardController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DashboardController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 21:41:05 --> Error: Class "App\Models\WarehouseItemModel" not found
+in APPPATH\Controllers\DashboardController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DashboardController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 21:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 21:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 22:02:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/portfolio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/portfolio.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 3 APPPATH\Controllers\PortfolioController.php(54): view('dashboard/portfolio', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PortfolioController->manage()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kt-n\\public\\index.php')
+INFO - 2025-07-28 22:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:04:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

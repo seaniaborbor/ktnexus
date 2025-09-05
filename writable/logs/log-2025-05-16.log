@@ -1,0 +1,218 @@
+INFO - 2025-05-16 17:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 17:58:06 --> ErrorException: Undefined property: App\Controllers\WhareHouseController::$entryModel
+in APPPATH\Controllers\WhareHouseController.php on line 21.
+ 1 APPPATH\Controllers\WhareHouseController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\WhareHouseController::$entryModel', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\app\\Controllers\\WhareHouseController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 17:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 17:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 17:58:17 --> ErrorException: Undefined property: App\Controllers\WhareHouseController::$entryModel
+in APPPATH\Controllers\WhareHouseController.php on line 21.
+ 1 APPPATH\Controllers\WhareHouseController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\WhareHouseController::$entryModel', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\app\\Controllers\\WhareHouseController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 18:14:35 --> ErrorException: Undefined property: App\Controllers\WhareHouseController::$entryModel
+in APPPATH\Controllers\WhareHouseController.php on line 19.
+ 1 APPPATH\Controllers\WhareHouseController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\WhareHouseController::$entryModel', 'C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\app\\Controllers\\WhareHouseController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 18:32:36 --> Error: Call to undefined function App\Controllers\r()
+in APPPATH\Controllers\WhareHouseController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 18:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 18:46:19 --> Error: Call to undefined function App\Controllers\string()
+in APPPATH\Controllers\WhareHouseController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 18:47:20 --> Error: Call to undefined function App\Controllers\random_string()
+in APPPATH\Controllers\WhareHouseController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-16 18:49:00 --> mysqli_sql_exception: Unknown column 'custoDeliveryStatus' in 'field list' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `cu...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\app\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#13 {main}
+CRITICAL - 2025-05-16 18:49:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+CRITICAL - 2025-05-16 18:49:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'608476\', 0, \'1\', \'1\', \'2025-05-16 18:49:00\', \'2025-05-16 18:49:00\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'608476\', 0, \'1\', \'1\', \'2025-05-16 18:49:00\', \'2025-05-16 18:49:00\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+CRITICAL - 2025-05-16 18:49:00 --> [Caused by] mysqli_sql_exception: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'608476\', 0, \'1\', \'1\', \'2025-05-16 18:49:00\', \'2025-05-16 18:49:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'608476\', 0, \'1\', \'1\', \'2025-05-16 18:49:00\', \'2025-05-16 18:49:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'608476\', 0, \'1\', \'1\', \'2025-05-16 18:49:00\', \'2025-05-16 18:49:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-16 18:49:58 --> mysqli_sql_exception: Unknown column 'custoDeliveryStatus' in 'field list' in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `cu...', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\app\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\kkk\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#13 {main}
+CRITICAL - 2025-05-16 18:49:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+CRITICAL - 2025-05-16 18:49:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'507040\', 0, \'1\', \'1\', \'2025-05-16 18:49:58\', \'2025-05-16 18:49:58\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'507040\', 0, \'1\', \'1\', \'2025-05-16 18:49:58\', \'2025-05-16 18:49:58\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+CRITICAL - 2025-05-16 18:49:58 --> [Caused by] mysqli_sql_exception: Unknown column 'custoDeliveryStatus' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'507040\', 0, \'1\', \'1\', \'2025-05-16 18:49:58\', \'2025-05-16 18:49:58\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'507040\', 0, \'1\', \'1\', \'2025-05-16 18:49:58\', \'2025-05-16 18:49:58\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (\'Tarnue\', \'admin@gmail.com\', \'0775577736\', \'Township of New Georgia, Montserrado county, RL\', \'507040\', 0, \'1\', \'1\', \'2025-05-16 18:49:58\', \'2025-05-16 18:49:58\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_table` (`custoName`, `custoEmail`, `custoPhone`, `custoAddress`, `custoSerial`, `custoDeliveryStatus`, `custoLoggedBy`, `custoLastUpdatedBy`, `custoLoggedAt`, `custoLastUpdatedAt`) VALUES (:custoName:, :custoEmail:, :custoPhone:, :custoAddress:, :custoSerial:, :custoDeliveryStatus:, :custoLoggedBy:, :custoLastUpdatedBy:, :custoLoggedAt:, :custoLastUpdatedAt:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\WhareHouseController.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 18:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 19:03:14 --> Error: Call to undefined function App\Controllers\str_upper()
+in APPPATH\Controllers\WhareHouseController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 19:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 19:03:35 --> Error: Call to undefined function App\Controllers\str_upper()
+in APPPATH\Controllers\WhareHouseController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\WhareHouseController->save_entry()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WhareHouseController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\kkk\\public\\index.php')
+INFO - 2025-05-16 19:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-16 19:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

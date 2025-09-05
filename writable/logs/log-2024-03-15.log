@@ -1,0 +1,1386 @@
+ERROR - 2024-03-15 10:34:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'aiistdb', 3306, '', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#11 {main}
+CRITICAL - 2024-03-15 10:34:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `career_table`.*, COUNT(course_table.coursecareer) as total_courses
+FROM `career_table`
+JOIN `course_table` ON `career_table`.`careerId` = `course_table`.`coursecareer`
+GROUP BY `career_table`.`careerId`, `career_table`.`careerName`
+) CI_count_all_results', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\PublicController.php(33): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:38:06 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:38:42 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 302.
+ 1 APPPATH\Controllers\CourseController.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:45:36 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:46:05 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:49:27 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:49:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:51:56 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 10:51:57 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 11:14:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/career_paths.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/career_paths.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/career_paths', [], true)
+ 3 APPPATH\Controllers\CareerController.php(233): view('dashboard/career_paths', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_paths()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 13:41:17 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 13:41:21 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 14:06:04 --> Error: Class "App\Controllers\courseModel" not found
+in APPPATH\Controllers\CareerController.php on line 240.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('4')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 14:06:52 --> Error: Class "App\Controllers\CourseModel" not found
+in APPPATH\Controllers\CareerController.php on line 240.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('4')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 14:12:30 --> Error: Class "App\Controllers\BlogModel" not found
+in APPPATH\Controllers\CareerController.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('4')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 14:14:25 --> ErrorException: Undefined variable $course_details
+in APPPATH\Views\public\career_path_details.php on line 13.
+ 1 APPPATH\Views\public\career_path_details.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course_details', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\career_path_details.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\career_path_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/career_path_details', [], true)
+ 5 APPPATH\Controllers\CareerController.php(263): view('public/career_path_details')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:47:10 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:47:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:47:43 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:47:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:47:52 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('career_path')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:48:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:48:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:48:41 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('career_path')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:29 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:32 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:54 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:50:55 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:51:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('courses', 'course_details', '6')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:51:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:51:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:56:40 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:56:41 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:59:57 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 16:59:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:00:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:00:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:02:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:02:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:05:49 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:05:52 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:08:11 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:08:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:08:42 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:08:44 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:10:41 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:10:43 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:15:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:15:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:15:20 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:15:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:19:39 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:19:40 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:25:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:25:32 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:25:39 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:25:41 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:35:47 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:35:49 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:36:29 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:36:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:41:32 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:41:35 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CareerController.php on line 260.
+ 1 APPPATH\Controllers\CareerController.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CareerController.php', 260)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CareerController->view_career_path_detail('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CareerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:41:51 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:41:52 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:42:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:42:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:43:00 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 17:43:02 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:26:14 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:26:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:26:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:26:14 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:29:16 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:29:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:29:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:29:16 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog_comments`.`id` as `comment_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:31:52 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:31:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:31:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:31:52 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:32:02 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:32:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:32:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:32:02 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:33:09 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:33:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:33:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:33:09 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.`id`, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(263): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:34:23 --> ErrorException: Undefined variable $BlogModeltable
+in APPPATH\Controllers\BlogController.php on line 256.
+ 1 APPPATH\Controllers\BlogController.php(256): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $BlogModeltable', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\BlogController.php', 256)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+ERROR - 2024-03-15 18:34:45 --> mysqli_sql_exception: Duplicate column name 'id' in C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\app\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+#7 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+#8 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+#9 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\codeigniterprojects\aiist-dot-net\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+CRITICAL - 2024-03-15 18:34:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:34:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:34:45 --> [Caused by] mysqli_sql_exception: Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog_comments`.*, `blog`.*, `blog`.`id` as `blg_id`, `blog`.`createdAt` as `posted_date`, COUNT(blog_comments.id) AS comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\BlogController.php(262): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:48:15 --> ErrorException: Attempt to read property "featureImg" on array
+in APPPATH\Views\public\blog.php on line 30.
+ 1 APPPATH\Views\public\blog.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "featureImg" on array', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\blog.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(266): view('public/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 18:50:05 --> ErrorException: Attempt to read property "category" on array
+in APPPATH\Views\public\blog.php on line 32.
+ 1 APPPATH\Views\public\blog.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category" on array', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\blog.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(266): view('public/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->view_blogs()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:20:38 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(285): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'logo.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:20:41 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(285): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:21:54 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(285): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'logo.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:21:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(285): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:24:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'logo.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:24:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:25:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'logo.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:25:32 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:28:15 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'logo.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:28:17 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\public\read_blog.php on line 11.
+ 1 APPPATH\Views\public\read_blog.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\public\\read_blog.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/read_blog', [], true)
+ 5 APPPATH\Controllers\BlogController.php(292): view('public/read_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->blog_details('img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:29:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
+CRITICAL - 2024-03-15 19:29:19 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\CourseController.php on line 309.
+ 1 APPPATH\Controllers\CourseController.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Controllers\\CourseController.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\CourseController->course_details('img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')

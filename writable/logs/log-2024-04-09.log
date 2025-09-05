@@ -1,0 +1,27 @@
+ERROR - 2024-04-09 03:23:58 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-04-09 03:23:58 --> 220 smtp.gmail.com ESMTP n38-20020a05600c502600b004169df54d19sm1583712wmr.28 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [41.191.107.45]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor n38-20020a05600c502600b004169df54d19sm1583712wmr.28 - gsmtp
+
+CRITICAL - 2024-04-09 03:46:53 --> ErrorException: Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\app\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Custom404Controller.php(10): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Custom404Controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(970): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom404Controller))
+ 8 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\aiist-dot-net\\public\\index.php')
