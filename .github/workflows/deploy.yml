@@ -21,7 +21,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./           # local root of your project
-          server-dir: /ktnexus.site/appfiles/    # upload everything into htdocs
+          server-dir: /appfiles/    # upload everything into htdocs
           exclude: |
             **/.git*
             **/.github*
