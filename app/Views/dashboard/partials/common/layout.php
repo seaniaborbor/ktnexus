@@ -315,7 +315,7 @@
     <nav class="navbar bg-light navbar-light">
         <!-- Logo -->
         <a href="/dashboard" class="navbar-brand mx-4 mb-3">
-            <img src="<?= base_url('public_assets/img/logo/riselogo.png') ?>" alt="Company Logo" class="mb-3 img-fluid" style="">
+            <img src="<?= base_url('public_assets/img/logo/logo.png') ?>" alt="Company Logo" class="mb-3 img-fluid" style="">
         </a>
 
         <!-- User Profile -->

@@ -61,11 +61,12 @@
                                                         <h5 class="card-title"><?= esc($member['name']) ?></h5>
                                                         <h6 class="card-subtitle mb-2 text-primary"><?= esc($member['position']) ?></h6>
                                                         
-                                                        <p class="card-text text-truncate"><?= esc($member['bio']) ?></p>
+                                                        <p class="card-text mt-0 text-truncate"><?= esc($member['bio']) ?></p>
+                                                        <p class="card-text mt-0 text-truncate"><?= esc($member['email']) ?></p>
                                                     </div>
                                                     <div class="col-md-3">
                                                        
-                                                        <?php $link = base_url() . '#team' . $member['teamId']; ?>
+                                                        <?php $link = base_url() . 'team?member=' . $member['teamId']; ?>
                                                         <img class="img-fluid" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<?= urlencode($link) ?>" alt="QR Code" />
 
                                                 </div>
