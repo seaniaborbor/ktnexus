@@ -20,6 +20,7 @@ class Home extends BaseController
             'meta_title' => 'KT-NEXUS Technologies - Innovative IT Solutions',
             'meta_description' => 'Leading IT solutions provider specializing in custom software development, web applications, and database management systems.',
             'meta_keywords' => 'IT solutions, software development, web applications, database management',
+            'page' => 'home',
             
             'projects' => $this->projectModel
                 ->where('status', 'published')
@@ -43,6 +44,8 @@ class Home extends BaseController
             'meta_title' => 'About KT-NEXUS Technologies - Our Story',
             'meta_description' => 'Since 2018, KT-NEXUS Technologies has been helping businesses transform through innovative technology solutions.',
             'meta_keywords' => 'about us, company history, IT solutions provider',
+            'page' => 'about',
+
             
             'team' => $this->teamModel
                 ->where('is_active', 1)
@@ -79,6 +82,8 @@ class Home extends BaseController
         'meta_title' => 'Our Portfolio - KT-NEXUS Technologies',
         'meta_description' => 'Explore our portfolio of completed projects showcasing our expertise in software development and IT solutions.',
         'meta_keywords' => 'portfolio, projects, case studies, IT solutions',
+        'page' => 'portfolio',
+
         
         'projects' => $projects,
         'categories' => $categories,
@@ -111,6 +116,7 @@ class Home extends BaseController
             'meta_title' => $project['title'] . ' - KT-NEXUS Technologies Project',
             'meta_description' => $project['description'] ? character_limiter(strip_tags($project['description']), 150) : 'Project details from KT-NEXUS Technologies',
             'meta_keywords' => strtolower($project['title']) . ', ' . $project['category'] . ', project, case study',
+            'page' => 'portfolio',
             
             'project' => $project,
             'related_projects' => $relatedProjects
@@ -118,4 +124,37 @@ class Home extends BaseController
         
         return view('public/portfolio_detail', $data);
     }
+
+public function team(): string
+{
+    $team = $this->teamModel
+        ->where('is_active', 1)
+        ->orderBy('join_date', 'ASC')
+        ->findAll();
+
+    $selectedId = $this->request->getGet('member'); // get ?member=ID
+    $selectedMember = null;
+
+    if ($selectedId) {
+        foreach ($team as $member) {
+            if ($member['teamId'] == $selectedId) {
+                $selectedMember = $member;
+                break;
+            }
+        }
+    }
+
+    $data = [
+        'meta_title' => 'Our Team - KT-NEXUS Technologies',
+        'meta_description' => 'Meet the dedicated professionals behind KT-NEXUS Technologies who deliver innovative IT solutions.',
+        'meta_keywords' => 'our team, IT experts, staff, KT-NEXUS Technologies',
+        'page' => 'team',
+        'team' => $team,
+        'selectedMember' => $selectedMember // 🔑 pass to view
+    ];
+
+    return view('public/team', $data);
+}
+
+
 }

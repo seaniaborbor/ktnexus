@@ -40,7 +40,8 @@
                         ?>
                         <div class="col-md-6 col-lg-4 portfolio-item <?= esc($categoryClass) ?>" 
                              data-aos="fade-up" data-aos-delay="<?= $animationDelay ?>">
-                            <div class="portfolio-card h-100">
+                            <div class="card-body">
+                                <div class="portfolio-card h-100">
                                 <?php if (!empty($project['featured_image'])): ?>
                                     <img src="<?= base_url('uploads/portfolio/' . esc($project['featured_image'])) ?>" 
                                          alt="<?= esc($project['title']) ?>" class="portfolio-img">
@@ -50,13 +51,16 @@
                                 <?php endif; ?>
                                 <div class="p-4">
                                     <span class="portfolio-category"><?= esc($project['category']) ?></span>
-                                    <h3><?= esc($project['title']) ?></h3>
-                                    <p><?= esc(character_limiter(strip_tags(html_entity_decode($project['description'])), 100)) ?></p>
-                                    <a href="<?= base_url('portfolio/' . esc($project['slug'])) ?>" 
-                                       class="text-primary text-decoration-none fw-bold">View Details →</a>
+                                    <h3><?= substr(esc($project['title']),0,20) ?>.</h3>
+                                    <p><?= substr(html_entity_decode($project['description']),0, 100) ?></p>
+                                   
                                 </div>
                             </div>
+                             <a href="<?= base_url('portfolio/' . esc($project['slug'])) ?>" 
+                                       class="text-primary card-link  text-decoration-none fw-bold">View Details →</a>
+                            </div>
                         </div>
+                        
                     <?php endforeach; ?>
                 <?php else: ?>
                     <div class="col-12 text-center py-5">
@@ -87,4 +91,33 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".portfolio-filter button");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remove 'active' from all buttons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            portfolioItems.forEach(item => {
+                if (filterValue === "*" || item.classList.contains(filterValue.substring(1))) {
+                    item.style.display = "block";
+                    setTimeout(() => item.style.opacity = "1", 50);
+                } else {
+                    item.style.opacity = "0";
+                    setTimeout(() => item.style.display = "none", 300);
+                }
+            });
+        });
+    });
+});
+</script>
+
 <?=$this->endSection()?>

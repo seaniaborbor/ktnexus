@@ -180,3 +180,353 @@ INFO - 2025-09-05 16:51:24 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-09-05 17:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-09-05 17:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-09-05 17:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-05 18:58:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(50): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->about()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(50): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->about()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 18:58:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `team`
+WHERE `is_active` = :is_active:
+AND `team`.`deleted_at` IS NULL
+ORDER BY `join_date` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(50): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->about()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+ERROR - 2025-09-05 18:59:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 18:59:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projects`
+WHERE `status` = :status:
+AND `projects`.`deleted_at` IS NULL
+ORDER BY `project_date` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+ERROR - 2025-09-05 18:59:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 18:59:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projects`
+WHERE `status` = :status:
+AND `projects`.`deleted_at` IS NULL
+ORDER BY `project_date` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+ERROR - 2025-09-05 19:00:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 19:00:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projects`
+WHERE `status` = :status:
+AND `projects`.`deleted_at` IS NULL
+ORDER BY `project_date` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+ERROR - 2025-09-05 19:00:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 19:00:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projects`
+WHERE `status` = :status:
+AND `projects`.`deleted_at` IS NULL
+ORDER BY `project_date` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+ERROR - 2025-09-05 19:00:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ktn2', 3306, '', 0)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\app\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#7 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\PYTHAGORAS\Desktop\codeigniter projects\HOSTED APPS\ktnexus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAG...')
+#11 {main}
+CRITICAL - 2025-09-05 19:00:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `projects`
+WHERE `status` = :status:
+AND `projects`.`deleted_at` IS NULL
+ORDER BY `project_date` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+INFO - 2025-09-05 19:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-05 19:27:50 --> InvalidArgumentException: Invalid escape context provided.
+in SYSTEMPATH\Common.php on line 446.
+ 1 APPPATH\Views\public\portfolio.php(55): esc('<p>&nbsp;</p>
+<p>KT-NEXUS Technologies proudly partnered with Barcus Group of Agencies to design and develop a fully functional&nbsp;<strong>e-commerce and content management platform</strong> tailored to meet the company&rsquo;s growing online needs.</p>
+<p>The solution includes over <strong>20 dynamic and responsive pages</strong>, offering a smooth shopping experience for users and an easy-to-manage backend for administrators. Built on the <strong>CodeIgniter framework</strong>, the platform leverages modern web technologies and best practices in user interface and user experience design.</p>
+<p>Key features of the project include:</p>
+<ul>
+<li>
+<p><strong>Custom product catalog and cart system</strong></p>
+</li>
+<li>
+<p><strong>Secure checkout with payment gateway integration</strong></p>
+</li>
+<li>
+<p><strong>Admin dashboard for inventory and order management</strong></p>
+</li>
+<li>
+<p><strong>SEO-friendly content management tools</strong></p>
+</li>
+<li>
+<p><strong>Responsive design for desktop and mobile</strong></p>
+</li>
+<li>
+<p><strong>API integrations for real-time data updates</strong></p>
+</li>
+</ul>
+<p>This project demonstrates our ability to deliver scalable, high-performance web applications that balance design, functionality, and business goals. Barcus Group of Agencies now has a digital platform that supports their brand vision and enables them to manage and grow their online presence with confidence.</p>', '0', '100')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\app\\Views\\public\\portfolio.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/portfolio', [], true)
+ 5 APPPATH\Controllers\Home.php(88): view('public/portfolio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->portfolio()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PYTHAGORAS\\Desktop\\codeigniter projects\\HOSTED APPS\\ktnexus\\public\\index.php')
+INFO - 2025-09-05 19:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 19:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-05 23:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

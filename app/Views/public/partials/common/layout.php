@@ -4,9 +4,26 @@
 <head>
    <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RISE Liberia - Innovative Solutions for Excellence</title>
-<meta name="description" content="Rigorous Innovative Solutions for Excellence - Empowering Liberia's Youth and Creativity through technology, entertainment, and infrastructure">
-<meta name="keywords" content="RISE Liberia, technology, entertainment, infrastructure, Liberia youth empowerment, IT solutions">
+<title><?= strip_tags(html_entity_decode($meta_title ?? 'KT-NEXUS Technologies')) ?></title>
+<meta name="description" content="<?= strip_tags(html_entity_decode($meta_description ?? 'Innovative IT Solutions provider')) ?>">
+<meta name="keywords" content="<?= strip_tags(html_entity_decode($meta_keywords ?? 'IT, software, web development, database')) ?>">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="<?= strip_tags(html_entity_decode($meta_title ?? 'KT-NEXUS Technologies')) ?>">
+<meta property="og:description" content="<?= strip_tags(html_entity_decode($meta_description ?? '')) ?>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<?= current_url() ?>">
+<meta property="og:image" content="<?= base_url('assets/images/og-default.jpg') ?>">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= strip_tags(html_entity_decode($meta_title ?? 'KT-NEXUS Technologies')) ?>">
+<meta name="twitter:description" content="<?= strip_tags(html_entity_decode($meta_description ?? '')) ?>">
+<meta name="twitter:image" content="<?= base_url('assets/images/og-default.jpg') ?>">
+
+<!-- Mobile Friendly -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -1257,7 +1274,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="/public_assets/img/logo/logo.png" alt="RISE Liberia Logo">
+                <img src="/public_assets/img/logo/logo.png" class="rounded" alt="KT-Nexus Logo" >
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -1265,25 +1282,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link <?php if(isset($page) && $page == 'home'){ echo 'active'; } ?>" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about_us">About</a>
+                        <a class="nav-link <?php if(isset($page) && $page == 'about'){ echo 'active'; } ?>" href="/about_us">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                        <a class="nav-link <?php if(isset($page) && $page == 'portfolio'){ echo 'active'; } ?>" href="/portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/team">Team</a>
+                        <a class="nav-link <?php if(isset($page) && $page == 'team'){ echo 'active'; } ?>" href="/team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#contact">Contact</a>
+                        <a class="nav-link <?php if(isset($page) && $page == 'contact'){ echo 'active'; } ?>" href="/#contact">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-2">
                         <a class="btn btn-primary d-block mt-2 mt-lg-0" href="/auth">Login</a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
 

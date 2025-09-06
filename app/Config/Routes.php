@@ -11,6 +11,7 @@ $routes->set404Override('App\Controllers\Custom404Controller::index');
 $routes->get('/', 'Home::index');
 $routes->get('/about_us', 'Home::about');
 $routes->get('/portfolio', 'Home::portfolio');
+$routes->get('/team', 'Home::team');
 $routes->get('/portfolio/(:any)', 'Home::portfolio_detail/$1');
 
 $routes->post('send_message', 'Contact::sendMessage');
