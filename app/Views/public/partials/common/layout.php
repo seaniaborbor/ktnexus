@@ -13,13 +13,14 @@
 <meta property="og:description" content="<?= strip_tags(html_entity_decode($meta_description ?? '')) ?>">
 <meta property="og:type" content="website">
 <meta property="og:url" content="<?= current_url() ?>">
-<meta property="og:image" content="<?= base_url('assets/images/og-default.jpg') ?>">
+<meta property="og:image" content="<?= base_url('public_assets/img/home/defaultbanner.png') ?>">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= strip_tags(html_entity_decode($meta_title ?? 'KT-NEXUS Technologies')) ?>">
 <meta name="twitter:description" content="<?= strip_tags(html_entity_decode($meta_description ?? '')) ?>">
-<meta name="twitter:image" content="<?= base_url('assets/images/og-default.jpg') ?>">
+<meta name="twitter:image" content="<?= base_url('public_assets/img/home/defaultbanner.png') ?>">
+<link rel="icon" type="image/png" href="/public_assets/img/logo/logo.png">
 
 <!-- Mobile Friendly -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1274,7 +1275,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="/public_assets/img/logo/logo.png" class="rounded" alt="KT-Nexus Logo" >
+                <img src="/public_assets/img/logo/logo.png" class="rounded" alt="KT-Nexus Logo" style="height: auto; max-width:200px" >
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
