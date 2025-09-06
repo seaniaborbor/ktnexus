@@ -1,5 +1,5 @@
 name: 🚀 Deploy CodeIgniter 4.5 to Host
-## cUC5jiW[]1Lt
+
 on:
   push:
     branches:
@@ -20,8 +20,8 @@ jobs:
           password: ${{ secrets.CPANEL_FTP_PASS }}
           protocol: ftp
           port: 21
-          local-dir: ./           # local root of your project
-          server-dir: /appfiles/    # upload everything into htdocs
+          local-dir: ./                        # Local root of your project
+          server-dir: /ktnexus.site/appfiles/  # Correct remote path
           exclude: |
             **/.git*
             **/.github*
